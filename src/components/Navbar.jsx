@@ -59,16 +59,6 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="/products"
-              className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
-                isActive("/products") 
-                  ? "bg-accent text-white shadow-sm" 
-                  : "text-slate-600 hover:text-primary hover:bg-slate-100/50"
-              }`}
-            >
-              Products
-            </Link>
-            <Link
               to="/about"
               className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
                 isActive("/about") 
@@ -79,6 +69,16 @@ const Navbar = () => {
               About Us
             </Link>
             <Link
+              to="/products"
+              className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
+                isActive("/products") 
+                  ? "bg-accent text-white shadow-sm" 
+                  : "text-slate-600 hover:text-primary hover:bg-slate-100/50"
+              }`}
+            >
+              Product
+            </Link>
+            <Link
               to="/contact"
               className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
                 isActive("/contact") 
@@ -86,7 +86,7 @@ const Navbar = () => {
                   : "text-slate-600 hover:text-primary hover:bg-slate-100/50"
               }`}
             >
-              Contact
+              Contact Us
             </Link>
           </div>
 
@@ -119,14 +119,6 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/products"
-            className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
-              isActive("/products") ? "bg-slate-50 text-accent font-bold" : "text-slate-600 hover:bg-slate-50"
-            }`}
-          >
-            Products
-          </Link>
-          <Link
             to="/about"
             className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
               isActive("/about") ? "bg-slate-50 text-accent font-bold" : "text-slate-600 hover:bg-slate-50"
@@ -135,12 +127,20 @@ const Navbar = () => {
             About Us
           </Link>
           <Link
+            to="/products"
+            className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
+              isActive("/products") ? "bg-slate-50 text-accent font-bold" : "text-slate-600 hover:bg-slate-50"
+            }`}
+          >
+            Product
+          </Link>
+          <Link
             to="/contact"
             className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
               isActive("/contact") ? "bg-slate-50 text-accent font-bold" : "text-slate-600 hover:bg-slate-50"
             }`}
           >
-            Contact
+            Contact Us
           </Link>
         </div>
       </div>

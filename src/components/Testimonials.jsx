@@ -30,15 +30,15 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-primary text-white overflow-hidden relative">
+    <section className="mx-4 mb-6 sm:mx-6 sm:mb-8 lg:mx-8 lg:mb-10 rounded-3xl bg-primary text-white py-16 px-6 sm:px-10 overflow-hidden relative shadow-xl">
       {/* Decorative Blur Backgrounds */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-accent/25 rounded-full blur-3xl -ml-48 -mt-48" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-700/20 rounded-full blur-3xl -mr-48 -mb-48" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-accent/25 rounded-full blur-3xl -ml-48 -mt-48 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-700/20 rounded-full blur-3xl -mr-48 -mb-48 pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-amber-400 font-bold tracking-wider uppercase text-sm">Distributor Reviews</span>
           <h2 className="text-3xl sm:text-4xl font-poppins font-bold mt-2">
             Trusted By The Industry Leaders

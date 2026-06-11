@@ -6,8 +6,8 @@ const CTA = () => {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-900 to-primary text-white relative overflow-hidden">
       {/* Decorative Gradients */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-accent/20 rounded-full blur-3xl -mr-40 -mt-40" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-700/10 rounded-full blur-3xl -ml-40 -mb-40" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-accent/20 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-700/10 rounded-full blur-3xl -ml-40 -mb-40 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

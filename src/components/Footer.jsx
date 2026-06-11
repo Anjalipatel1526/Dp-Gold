@@ -9,14 +9,16 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary text-slate-350 border-t border-slate-900 pt-16 pb-8 text-sm relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="mx-4 mb-6 sm:mx-6 sm:mb-8 lg:mx-8 lg:mb-10 rounded-3xl bg-primary border border-slate-800 shadow-xl py-12 px-6 sm:px-10 text-slate-300 relative">
+      <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
           
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-4">
-            <Link to="/" onClick={scrollToTop} className="flex items-center gap-2">
-              <img src={logo} alt="DP Gold Logo" className="h-10 w-auto object-contain brightness-0 invert" />
+            <Link to="/" onClick={scrollToTop} className="flex items-center gap-2.5">
+              <div className="w-10 h-10 rounded-lg bg-white p-1 flex items-center justify-center shadow-sm overflow-hidden">
+                <img src={logo} alt="DP Gold Logo" className="max-w-full max-h-full object-contain" />
+              </div>
               <span className="font-poppins font-extrabold text-xl tracking-tight text-white">
                 DP <span className="text-amber-400">Gold</span>
               </span>
@@ -34,13 +36,13 @@ const Footer = () => {
                 <Link to="/" className="text-slate-400 hover:text-white transition-colors">Home</Link>
               </li>
               <li>
-                <Link to="/products" className="text-slate-400 hover:text-white transition-colors">Products</Link>
-              </li>
-              <li>
                 <Link to="/about" className="text-slate-400 hover:text-white transition-colors">About Us</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</Link>
+                <Link to="/products" className="text-slate-400 hover:text-white transition-colors">Product</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-slate-400 hover:text-white transition-colors">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -97,19 +99,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <p className="text-slate-500 text-center sm:text-left">
             &copy; {new Date().getFullYear()} DPGOLD Products (Dinesh Plastics). All Rights Reserved. Manufactured in Chennai, Tamil Nadu.
           </p>
-          
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-1 bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 px-3.5 rounded-lg transition-colors border border-slate-800"
-            title="Back to Top"
-          >
-            <span>Back to Top</span>
-            <FiChevronsUp />
-          </button>
         </div>
       </div>
     </footer>

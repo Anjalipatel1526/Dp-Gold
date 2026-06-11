@@ -9,9 +9,9 @@ const Hero = () => {
   return (
     <div className="relative bg-white overflow-hidden pt-28 pb-12 sm:pt-32 md:pt-36 md:pb-16 border-b border-slate-100">
       {/* Decorative clean geometric backgrounds */}
-      <div className="absolute top-0 right-0 w-[40%] h-[100%] bg-slate-50/50 rounded-l-[100px] z-0 hidden lg:block" />
-      <div className="absolute -top-40 left-1/3 w-96 h-96 bg-accent-50/40 rounded-full blur-3xl z-0" />
-      <div className="absolute -bottom-40 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl z-0" />
+      <div className="absolute top-0 right-0 w-[40%] h-[100%] bg-slate-50/50 rounded-l-[100px] z-0 hidden lg:block pointer-events-none" />
+      <div className="absolute -top-40 left-1/3 w-96 h-96 bg-accent-50/40 rounded-full blur-3xl z-0 pointer-events-none" />
+      <div className="absolute -bottom-40 right-10 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl z-0 pointer-events-none" />
 
       {/* Content Layer */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-primary w-full">

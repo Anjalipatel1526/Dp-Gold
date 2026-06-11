@@ -6,18 +6,16 @@ import heroImg from "../assets/hero/hero-banner.jpg";
 const AboutPage = () => {
   return (
     <div className="pt-24 bg-brandBg min-h-screen">
-      {/* Page Header Banner */}
-      <div className="bg-primary text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-accent opacity-90" />
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="Factory" className="w-full h-full object-cover opacity-20" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 z-10">
-          <span className="text-amber-400 font-bold uppercase tracking-wider text-xs">Quality is Our Legacy</span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-extrabold">
-            About DPGOLD Products
+      {/* Page Header - Redesigned Clean & Minimal */}
+      <div className="bg-white py-16 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+          <span className="text-amber-500 font-bold uppercase tracking-widest text-xs block">
+            Quality is Our Legacy
+          </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-extrabold text-primary">
+            About DP <span className="text-amber-500">Gold</span>
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
             A specialized manufacturing brand under the wing of Dinesh Plastics, dedicated to creating premium PVC electrical accessories.
           </p>
         </div>
@@ -51,7 +49,7 @@ const AboutPage = () => {
 
             {/* Visual Panel */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-accent to-accent-300 rounded-2xl transform rotate-2 scale-102 opacity-10" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-accent to-accent-300 rounded-2xl transform rotate-2 scale-102 opacity-10 hidden md:block pointer-events-none" />
               <img
                 src={qualityImg}
                 alt="DPGOLD High Glossy Plates"

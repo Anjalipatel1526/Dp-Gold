@@ -62,7 +62,7 @@ Message: ${formData.message || "Interested in catalog and price lists"}`;
       <div className="grid grid-cols-1 lg:grid-cols-12">
         {/* Info Column (Dark Navy) */}
         <div className="lg:col-span-5 bg-primary p-8 sm:p-12 text-white flex flex-col justify-between relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/25 rounded-full blur-3xl -mr-32 -mt-32" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/25 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
           
           <div className="space-y-8 relative z-10">
             <div>

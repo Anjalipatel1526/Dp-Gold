@@ -9,15 +9,16 @@ const ContactPage = () => {
 
   return (
     <div className="pt-24 bg-brandBg min-h-screen">
-      {/* Header Banner */}
-      <div className="bg-primary text-white py-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-95" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span className="text-amber-400 font-bold uppercase tracking-wider text-xs">Get in Touch</span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-extrabold">
-            Contact DPGOLD Products
+      {/* Page Header - Redesigned Clean & Minimal */}
+      <div className="bg-white py-16 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+          <span className="text-amber-500 font-bold uppercase tracking-widest text-xs block">
+            Get in Touch
+          </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-extrabold text-primary">
+            Contact DP <span className="text-amber-500">Gold</span>
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
             Contact our factory sales representatives, request structural test reports, or schedule a bulk dealership meeting.
           </p>
         </div>

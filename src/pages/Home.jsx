@@ -1,31 +1,14 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import ProductSection from "../components/ProductSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Testimonials from "../components/Testimonials";
-import CTA from "../components/CTA";
-import ProductDetailModal from "../components/ProductDetailModal";
 import { faqs } from "../data/products";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
 const Home = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaqIdx, setOpenFaqIdx] = useState(null);
-  const navigate = useNavigate();
-
-  const handleOpenDetails = (product) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
-  };
-
-  const handleInquireProduct = (product) => {
-    setIsModalOpen(false);
-    // Navigate to Contact Page and pass state
-    navigate("/contact", { state: { product } });
-  };
 
   const toggleFaq = (idx) => {
     if (openFaqIdx === idx) {
@@ -98,16 +81,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer Callout */}
-      <CTA />
-
-      {/* Product Detail Modal */}
-      <ProductDetailModal
-        product={selectedProduct}
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onInquire={handleInquireProduct}
-      />
     </div>
   );
 };

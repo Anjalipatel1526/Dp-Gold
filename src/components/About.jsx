@@ -12,7 +12,7 @@ const About = () => {
           {/* Visual Side */}
           <div className="lg:col-span-5 relative" data-aos="fade-right">
             {/* Background elements */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-accent to-accent-300 rounded-3xl transform rotate-3 scale-102 opacity-10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-accent to-accent-300 rounded-3xl transform rotate-3 scale-102 opacity-10 hidden md:block pointer-events-none" />
             
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
               <img
@@ -76,7 +76,6 @@ const About = () => {
             <div className="flex items-center gap-4 pt-2">
               <Link to="/about" className="btn-primary">
                 <span>Learn Our Story</span>
-                <FiArrowRight />
               </Link>
               <Link to="/products" className="btn-outline">
                 <span>View Full Catalog</span>
