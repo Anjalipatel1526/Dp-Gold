@@ -2,10 +2,39 @@ import React from "react";
 import { FiAward, FiSettings, FiCheckCircle, FiShield, FiHeart } from "react-icons/fi";
 import qualityImg from "../assets/products/round-sheet.jpg";
 import heroImg from "../assets/hero/hero-banner.jpg";
+import SEO from "../components/SEO";
 
 const AboutPage = () => {
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Dinesh Plastics",
+      "brand": "DPGOLD",
+      "logo": `${window.location.origin}/logo.png`,
+      "description": "Dinesh Plastics manufactures premium PVC round sheets, fan sheets, junction boxes, fan boxes, and conduit fittings in Chennai. Virgin FR materials, threaded brass inserts.",
+      "telephone": "+91 81487 44998",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30 Vanchinathan Street, Krishnamoorthy Nagar",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600118",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <div className="pt-24 bg-brandBg min-h-screen">
+      <SEO
+        title="About Us | DPGOLD - Premium PVC Electrical Accessories"
+        description="Learn about DPGOLD, a specialized brand under Dinesh Plastics pioneering flame-retardant PVC electrical accessories and testing protocols in Chennai."
+        keywords="About DPGOLD, Dinesh Plastics history, PVC electrical standards, glow-wire flammability test, brass insert pull-out test"
+        schema={aboutSchema}
+      />
+
       {/* Page Header - Redesigned Clean & Minimal */}
       <div className="bg-white py-16 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { products } from "../data/products";
 import { FiMessageCircle } from "react-icons/fi";
+import SEO from "../components/SEO";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -10,8 +11,41 @@ const Products = () => {
     navigate("/contact", { state: { product } });
   };
 
+  const productsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "DPGOLD PVC Electrical Accessories Catalog",
+    "description": "Catalog of premium uPVC electrical fittings, junction boxes, and sheets.",
+    "itemListElement": products.map((product, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "item": {
+        "@type": "Product",
+        "name": product.name,
+        "image": product.image ? `${window.location.origin}${product.image}` : undefined,
+        "description": `Premium DPGOLD ${product.name} manufactured by Dinesh Plastics.`,
+        "brand": {
+          "@type": "Brand",
+          "name": "DPGOLD"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "priceValuedRange": "Call for bulk pricing"
+        }
+      }
+    }))
+  };
+
   return (
     <div className="pt-24 bg-brandBg min-h-screen">
+      <SEO
+        title="Our Products | DPGOLD PVC Electrical Accessories Catalog"
+        description="Browse DPGOLD's premium range of PVC electrical products, including round sheets, fan sheets, junction boxes, deep ceiling boxes, and conduit fittings in Chennai."
+        keywords="PVC round sheet, electrical fan box, junction box manufacturer, uPVC conduit fittings, DPGOLD product catalog"
+        schema={productsSchema}
+      />
+
       {/* Page Header - Redesigned Clean & Minimal */}
       <div className="bg-white py-16 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">

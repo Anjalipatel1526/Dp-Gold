@@ -6,6 +6,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import Testimonials from "../components/Testimonials";
 import { faqs } from "../data/products";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import SEO from "../components/SEO";
 
 const Home = () => {
   const [openFaqIdx, setOpenFaqIdx] = useState(null);
@@ -18,8 +19,56 @@ const Home = () => {
     }
   };
 
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DPGOLD Products",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Dinesh Plastics",
+      "url": "https://dpgoldproducts.com/"
+    },
+    "image": "https://dpgoldproducts.com/og-image.jpg",
+    "@id": "https://dpgoldproducts.com/#localbusiness",
+    "url": "https://dpgoldproducts.com/",
+    "telephone": "+91 81487 44998",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30 Vanchinathan Street, Krishnamoorthy Nagar",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600118",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "13.1218824",
+      "longitude": "80.2227181"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:30"
+    }
+  };
+
   return (
     <div className="relative">
+      <SEO
+        title="DPGOLD Products | Dinesh Plastics | PVC Electrical Accessories Manufacturer"
+        description="Premium uPVC electrical accessories by Dinesh Plastics in Chennai. High flame retardancy, precision brass threads, maximum load-bearing. Sourced by building contractors."
+        keywords="DPGOLD, Dinesh Plastics, PVC Electrical Accessories, Round Sheet Chennai, Junction Box, Fan Box, uPVC conduit fittings, Chennai PVC manufacturer"
+        schema={homeSchema}
+      />
+
       {/* Hero Header */}
       <Hero />
 

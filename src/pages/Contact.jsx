@@ -2,13 +2,39 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
 import { FiPhoneCall, FiMapPin, FiMail, FiClock } from "react-icons/fi";
+import SEO from "../components/SEO";
 
 const ContactPage = () => {
   const location = useLocation();
   const prefilledProduct = location.state?.product || null;
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "DPGOLD Products",
+      "telephone": "+91 81487 44998",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30 Vanchinathan Street, Krishnamoorthy Nagar",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600118",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <div className="pt-24 bg-brandBg min-h-screen">
+      <SEO
+        title="Contact Us | Get in Touch with DPGOLD (Dinesh Plastics)"
+        description="Get in touch with the DPGOLD factory sales office in Chennai. Request product quotes, custom orders, or sample audits for PVC electrical accessories."
+        keywords="Contact DPGOLD, Dinesh Plastics phone, Chennai electrical accessories office, buy PVC round sheets bulk"
+        schema={contactSchema}
+      />
+
       {/* Page Header - Redesigned Clean & Minimal */}
       <div className="bg-white py-16 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
