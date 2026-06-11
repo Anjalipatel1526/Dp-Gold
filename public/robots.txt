@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dpgoldproducts.com/sitemap.xml
+Sitemap: https://dineshplastics.vercel.app/sitemap.xml
