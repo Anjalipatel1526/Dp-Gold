@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dpgoldproducts.com/sitemap.xml

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brandBg text-primary font-sans antialiased selection:bg-accent/20 selection:text-accent scroll-smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-accent text-white font-medium rounded-lg shadow-lg shadow-accent/25 hover:bg-accent-700 hover:shadow-accent-700/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-accent text-accent font-medium rounded-lg hover:bg-accent hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2;
+  }
+  
+  .card-premium {
+    @apply bg-white rounded-xl shadow-md border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300;
+  }
+}
+
+/* Custom Premium UI utilities */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(241, 245, 249, 0.8);
+}
+
+/* Hide default scrollbar for aesthetics but keep it functional */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom AOS style additions for smooth animations */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
